@@ -28,16 +28,16 @@ public class MainActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
 
                 EditText etAssunto = findViewById(R.id.etAssunto);
-                String assunto = etEmail.getText().toString();
+                String assunto = etAssunto.getText().toString();
 
                 EditText etTexto = findViewById(R.id.etTexto);
-                String texto = etEmail.getText().toString();
+                String texto = etTexto.getText().toString();
 
                 //Cria uma intencao para abrir um app de mensagem
                 Intent i = new Intent(Intent.ACTION_SENDTO);
 
                 //Indica apps de envio e recebimento de email
-                i.setData(Uri.parse("mailto: "));
+                i.setData(Uri.parse("mailto:"));
 
                 //Dados a serem enviados na intencao
                 String[] emails = new String[]{email};
